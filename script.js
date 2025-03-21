@@ -123,8 +123,8 @@ function connectToTwitch() {
         return;
     }
     
-    // Create a new client using the globally available tmi variable
-    twitchClient = new tmi.client({
+    // Use window.tmi to access the global tmi variable
+    twitchClient = new window.tmi.Client({
         connection: {
             secure: true,
             reconnect: true
