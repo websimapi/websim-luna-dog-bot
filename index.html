@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luna Dog Bot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="dog-container">
+            <div class="dog">
+                <div class="dog-head">
+                    <div class="dog-ears">
+                        <div class="ear left"></div>
+                        <div class="ear right"></div>
+                    </div>
+                    <div class="dog-face">
+                        <div class="eyes">
+                            <div class="eye left"></div>
+                            <div class="eye right"></div>
+                        </div>
+                        <div class="snout">
+                            <div class="nose"></div>
+                            <div class="mouth">
+                                <div class="tongue"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dog-body">
+                    <div class="tail"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-interface">
+            <div class="chat-header">
+                <h1>Luna Dog Bot</h1>
+                <div class="status-indicator">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Disconnected</span>
+                </div>
+            </div>
+            
+            <div class="chat-messages" id="chatMessages"></div>
+            
+            <div class="chat-input-area">
+                <input type="text" id="chatInput" placeholder="Say something to Luna...">
+                <button id="sendButton">Woof!</button>
+            </div>
+            
+            <div class="twitch-connect">
+                <h3>Connect to Twitch</h3>
+                <div class="twitch-inputs">
+                    <input type="text" id="twitchChannel" placeholder="Twitch channel name">
+                    <button id="connectButton">Connect</button>
+                    <button id="disconnectButton" disabled>Disconnect</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script type="importmap">
+        {
+            "imports": {
+                "tmi.js": "https://cdn.jsdelivr.net/npm/tmi.js@1.8.5/index.min.js"
+            }
+        }
+    </script>
+    <script src="config.js" type="module"></script>
+    <script src="script.js" type="module"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
