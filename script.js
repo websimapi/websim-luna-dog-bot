@@ -1,5 +1,4 @@
 import { config } from './config.js';
-import * as tmi from 'tmi.js';
 
 // Chat elements
 const chatMessages = document.getElementById('chatMessages');
@@ -124,8 +123,8 @@ function connectToTwitch() {
         return;
     }
     
-    // Create a new client
-    twitchClient = new tmi.Client({
+    // Create a new client using the globally available tmi variable
+    twitchClient = new tmi.client({
         connection: {
             secure: true,
             reconnect: true
@@ -216,4 +215,3 @@ function triggerBarkAnimation() {
 
 // Initialize the app when the DOM is loaded
 document.addEventListener('DOMContentLoaded', init);
-
